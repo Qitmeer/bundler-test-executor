@@ -11,7 +11,6 @@ HIST=$base/history
 #GITHUB_REF=${GITHUB_REF:=`git symbolic-ref  HEAD`}
 
 #starts with "refs/heads/{branchname}"
-branch=${2:-`echo $GITHUB_REF | perl -pe 's@.*/@@'`}
 
 rm -rf $base
 mkdir -p $base
