@@ -1,0 +1,3 @@
+2024年 02月 27日 星期二 14:51:52 CST: starting bundler /var/www/bundler-test-executor/bundlers/stackup/stackup.yml, name=stackup
+2024年 02月 27日 星期二 14:51:53 CST: done bundler /var/www/bundler-test-executor/bundlers/stackup/stackup.yml, name=stackup
+CONTAINER           REPOSITORY          TAG                 IMAGE ID            SIZE
