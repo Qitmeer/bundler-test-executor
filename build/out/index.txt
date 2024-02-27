@@ -1,5 +1,10 @@
+aabundler.json
 aabundler.log
 aabundler.txt
+aabundler.xml
+html/
 index.txt
+stackup.json
 stackup.log
 stackup.txt
+stackup.xml
