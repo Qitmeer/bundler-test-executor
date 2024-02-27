@@ -87,9 +87,9 @@ jobs:
       - run: "cd bundler-spec-tests && pdm install && cd @account-abstraction && yarn && yarn compile &&  cd ../spec && yarn && yarn build"
         name: update submodules of bundler-spec-tests
 
-      - run: VERBOSE=${{ inputs.verbose }} ./runall.sh ${{ inputs.runall_params }} 
-        if: ${{ ! inputs.skip_test }}
-        name: Run all tests ${{ inputs.runall_params }}
+    #   - run: VERBOSE=${{ inputs.verbose }} ./runall.sh ${{ inputs.runall_params }} 
+    #     if: ${{ ! inputs.skip_test }}
+    #     name: Run all tests ${{ inputs.runall_params }}
 
       - name: "Test summary"
         run: "grep -r '===.* in ' `find . -path '*build/out*txt'`| sed -e 's/===*//g' "

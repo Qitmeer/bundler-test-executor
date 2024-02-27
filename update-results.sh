@@ -1,16 +1,8 @@
 #!/bin/bash
 
-resultrepo=https://github.com/Qitmeer/bundler-test-results.git
 root=`cd \`dirname $0\`;pwd`
-if [[ -z "$1" || -d "$1" ]] ; then
-  echo usage: $0 {out-results-clone-folder} [branch]
-  echo "out folder is created."
-  echo "(if branch (or GITHUB_REF) is set, the folder is also cloned from $resultrepo)"
-  exit 1
-fi
 
 base=$root/$1
-branch=$2
 
 RUNS=$base/runs
 HIST=$base/history
@@ -23,9 +15,6 @@ branch=${2:-`echo $GITHUB_REF | perl -pe 's@.*/@@'`}
 
 rm -rf $base
 mkdir -p $base
-
-#pushing to the same branch in the results repo as this (ux) repo
-test -n "$branch" && git clone --depth 1 $resultrepo -b $branch $base
 
 ts=`date +%Y%m%d/%H%M%S`
 folder=$RUNS/$ts
