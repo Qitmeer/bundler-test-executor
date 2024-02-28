@@ -1,13 +1,13 @@
 #!/bin/bash
 
-# resultrepo=https://github.com/Qitmeer/bundler-test-results.git
+resultrepo=https://github.com/Qitmeer/bundler-test-executor.git
 root=`cd \`dirname $0\`;pwd`
-# if [[ -z "$1" || -d "$1" ]] ; then
-#   echo usage: $0 {out-results-clone-folder} [branch]
-#   echo "out folder is created."
-#   echo "(if branch (or GITHUB_REF) is set, the folder is also cloned from $resultrepo)"
-#   exit 1
-# fi
+if [[ -z "$1" || -d "$1" ]] ; then
+  echo usage: $0 {out-results-clone-folder} [branch]
+  echo "out folder is created."
+  echo "(if branch (or GITHUB_REF) is set, the folder is also cloned from $resultrepo)"
+  exit 1
+fi
 
 base=$root/$1
 branch=$2
@@ -19,16 +19,16 @@ HIST=$base/history
 # GITHUB_REF=${GITHUB_REF:=`git symbolic-ref  HEAD`}
 
 #starts with "refs/heads/{branchname}"
-# branch=${2:-`echo $GITHUB_REF | perl -pe 's@.*/@@'`}
+branch=${2:-`echo $GITHUB_REF | perl -pe 's@.*/@@'`}
 # echo $branch
-# rm -rf $base
-# mkdir -p $base
+rm -rf $base
+mkdir -p $base
 echo $base
 echo $RUNS
 echo $HIST
-# echo "git clone --depth 1 $resultrepo -b $branch $base"
+echo "git clone --depth 1 $resultrepo -b $branch $base"
 #pushing to the same branch in the results repo as this (ux) repo
-# test -n "$branch" && git clone --depth 1 $resultrepo -b $branch $base
+test -n "$branch" && git clone --depth 1 $resultrepo -b $branch $base
 
 ts=`date +%Y%m%d/%H%M%S`
 folder=$RUNS/$ts

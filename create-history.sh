@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 // create a full history json file
 
+
 //recursively remove "@" prefix from property names
 function removePrefix(obj) {
     return Object.keys(obj).reduce((set,key)=>{
@@ -17,13 +18,10 @@ const fs = require('fs')
 const path = require('path')
 
 dir=process.argv[2]
-
 allFiles = fs.readFileSync(path.join(dir,'all.txt'), 'ascii').split('\n')
-
 
 allFiles.sort()
 allFiles.reverse()
-
 allResults={}
 allFiles.filter(f=>f.endsWith('.json')).forEach(f=>{
     const [_, filepath, name] = f.match(/^(?:\W*)(.*)\/(.*?).json/)
