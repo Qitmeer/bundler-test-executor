@@ -1,1 +1,0 @@
-Running bundler /home/runner/work/bundler-test-executor/bundler-test-executor/bundlers/silius/silius.yml, name=silius
