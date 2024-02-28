@@ -2,4 +2,4 @@
 20240228/
 all.txt
 index.txt
-latest/
+latest

@@ -1,6 +1,10 @@
 .
 ./index.txt
 ./20240228
+./20240228/101136
+./20240228/101136/index.txt
+./20240228/101136/html
+./20240228/101136/html/index.html
 ./20240228/085107
 ./20240228/085107/index.txt
 ./20240228/085107/stackup.txt
@@ -39,16 +43,4 @@
 ./20240202/084750/aabundler.json
 ./20240202/084750/stackup.xml
 ./latest
-./latest/index.txt
-./latest/stackup.txt
-./latest/085107
-./latest/aabundler.txt
-./latest/aabundler.log
-./latest/stackup.json
-./latest/aabundler.xml
-./latest/stackup.log
-./latest/html
-./latest/html/index.html
-./latest/aabundler.json
-./latest/stackup.xml
 ./all.txt
