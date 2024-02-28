@@ -102,13 +102,6 @@ jobs:
       - name: Clone and update the gh-pages branch
         run: ./update-results.sh out-results gh-pages
 
-      - name: npm
-        run: sudo apt -y install nodejs
-
-      - name: Compile UI
-        run: cd landing-page && npm install && npm run build && mv ../out-results/index.html ../out-results/index-old.html && cp -rf out/* ../out-results/
-
-
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
