@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="aabundler" errors="0" failures="13" skipped="0" tests="171" time="2209.874" timestamp="2024-02-28T02:24:32.235542" hostname="fv-az1536-146"><testcase classname="tests.single.bundle.test_bundle" name="test_bundle_replace_op[only_priority_fee_bump]" time="1.752" /><testcase classname="tests.single.bundle.test_bundle" name="test_bundle_replace_op[only_max_fee_bump]" time="1.864" /><testcase classname="tests.single.bundle.test_bundle" name="test_bundle_replace_op[with_same_fee]" time="2.065" /><testcase classname="tests.single.bundle.test_bundle" name="test_bundle_replace_op[with_less_fee]" time="2.005" /><testcase classname="tests.single.bundle.test_bundle" name="test_bundle_replace_op[fee_bump_below_threshold]" time="1.962" /><testcase classname="tests.single.bundle.test_bundle" name="test_bundle_replace_op[fee_bump_at_threshold]" time="2.067" /><testcase classname="tests.single.bundle.test_bundle" name="test_bundle_replace_op[fee_bump_above_threshold]" time="1.988" /><testcase classname="tests.single.bundle.test_bundle" name="test_mempool_reputation_rules_all_entities[SREP-020-banned-entity-not-allowed-banned-sender]" time="12.057" /><testcase classname="tests.single.bundle.test_bundle" name="test_mempool_reputation_rules_all_entities[SREP-020-banned-entity-not-allowed-banned-paymaster]" time="7.115" /><testcase classname="tests.single.bundle.test_bundle" name="test_mempool_reputation_rules_all_entities[SREP-020-banned-entity-not-allowed-banned-factory]" time="6.994" /><testcase classname="tests.single.bundle.test_bundle" name="test_mempool_reputation_rules_all_entities[SREP-030-throttled-entity-allowed-a-little-throttled-sender]" time="23.533" /><testcase classname="tests.single.bundle.test_bundle" name="test_mempool_reputation_rules_all_entities[SREP-030-throttled-entity-allowed-a-little-throttled-paymaster]" time="24.058" /><testcase classname="tests.single.bundle.test_bundle" name="test_mempool_reputation_rules_all_entities[SREP-030-throttled-entity-allowed-a-little-throttled-factory]" time="24.155" /><testcase classname="tests.single.bundle.test_bundle" name="test_mempool_reputation_rules_all_entities[UREP-010 UREP-020-unstaked-entity-allowed-function-unstaked-sender]" time="26.147" /><testcase classname="tests.single.bundle.test_bundle" name="test_mempool_reputation_rules_all_entities[UREP-010 UREP-020-unstaked-entity-allowed-function-unstaked-paymaster]" time="69.334" /><testcase classname="tests.single.bundle.test_bundle" name="test_mempool_reputation_rules_all_entities[UREP-010 UREP-020-unstaked-entity-allowed-function-unstaked-factory]" time="51.274" /><testcase classname="tests.single.bundle.test_bundle" name="test_max_allowed_ops_unstaked_sender" time="3.320"><failure message="AssertionError: assert [UserOperatio...gnature='0x')] == [UserOperatio...gnature='0x')]&#10;  At index 0 diff: UserOperation(sender='0xCD8ED6623971E8956696bad88F4c6050695CA0E6', nonce='0x0', initCode='0x', callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001', callGasLimit='0x493e0', verificationGasLimit='0xf4240', preVerificationGas='0x493e0', maxFeePerGas='0xee6b2800', maxPriorityFeePerGas='0xb2d05e00', paymasterAndData='0x', signature='0x') != UserOperation(sender='0xCD8ED6623971E8956696bad88F4c6050695CA0E6', nonce='0x10000000000000000', initCode='0x', callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001', callGasLimit='0x493e0', verificationGasLimit='0xf4240', preVerificationGas='0x493e0', maxFeePerGas='0xee6b2800', maxPriorityFeePerGas='0xb2d05e00', paymasterAndData='0x', signature='0x')&#10;  Left contains one more item: UserOperation(sender='0xCD8ED6623971E8956696bad88F4c6050695CA0E6', nonce='0x30000000000000000', initCode='0x', callDat...tionGas='0x493e0', maxFeePerGas='0xee6b2800', maxPriorityFeePerGas='0xb2d05e00', paymasterAndData='0x', signature='0x')&#10;  Full diff:&#10;    [&#10;  +  UserOperation(sender='0xCD8ED6623971E8956696bad88F4c6050695CA0E6',&#10;  +                nonce='0x0',&#10;  +                initCode='0x',&#10;  +                callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001',&#10;  +                callGasLimit='0x493e0',&#10;  +                verificationGasLimit='0xf4240',&#10;  +                preVerificationGas='0x493e0',&#10;  +                maxFeePerGas='0xee6b2800',&#10;  +                maxPriorityFeePerGas='0xb2d05e00',&#10;  +                paymasterAndData='0x',&#10;  +                signature='0x'),&#10;     UserOperation(sender='0xCD8ED6623971E8956696bad88F4c6050695CA0E6',&#10;                   nonce='0x10000000000000000',&#10;                   initCode='0x',&#10;                   callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001',&#10;                   callGasLimit='0x493e0',&#10;                   verificationGasLimit='0xf4240',&#10;                   preVerificationGas='0x493e0',&#10;                   maxFeePerGas='0xee6b2800',&#10;                   maxPriorityFeePerGas='0xb2d05e00',&#10;                   paymasterAndData='0x',&#10;                   signature='0x'),&#10;     UserOperation(sender='0xCD8ED6623971E8956696bad88F4c6050695CA0E6',&#10;                   nonce='0x20000000000000000',&#10;                   initCode='0x',&#10;                   callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001',&#10;                   callGasLimit='0x493e0',&#10;                   verificationGasLimit='0xf4240',&#10;                   preVerificationGas='0x493e0',&#10;                   maxFeePerGas='0xee6b2800',&#10;                   maxPriorityFeePerGas='0xb2d05e00',&#10;                   paymasterAndData='0x',&#10;                   signature='0x'),&#10;     UserOperation(sender='0xCD8ED6623971E8956696bad88F4c6050695CA0E6',&#10;                   nonce='0x30000000000000000',&#10;                   initCode='0x',&#10;                   callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001',&#10;                   callGasLimit='0x493e0',&#10;                   verificationGasLimit='0xf4240',&#10;                   preVerificationGas='0x493e0',&#10;                   maxFeePerGas='0xee6b2800',&#10;                   maxPriorityFeePerGas='0xb2d05e00',&#10;                   paymasterAndData='0x',&#10;                   signature='0x'),&#10;    ]">tests/single/bundle/test_bundle.py:254: in test_max_allowed_ops_unstaked_sender
+    assert mempool == wallet_ops[1:-1]
+E   AssertionError: assert [UserOperatio...gnature='0x')] == [UserOperatio...gnature='0x')]
+E     At index 0 diff: UserOperation(sender='0xCD8ED6623971E8956696bad88F4c6050695CA0E6', nonce='0x0', initCode='0x', callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001', callGasLimit='0x493e0', verificationGasLimit='0xf4240', preVerificationGas='0x493e0', maxFeePerGas='0xee6b2800', maxPriorityFeePerGas='0xb2d05e00', paymasterAndData='0x', signature='0x') != UserOperation(sender='0xCD8ED6623971E8956696bad88F4c6050695CA0E6', nonce='0x10000000000000000', initCode='0x', callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001', callGasLimit='0x493e0', verificationGasLimit='0xf4240', preVerificationGas='0x493e0', maxFeePerGas='0xee6b2800', maxPriorityFeePerGas='0xb2d05e00', paymasterAndData='0x', signature='0x')
+E     Left contains one more item: UserOperation(sender='0xCD8ED6623971E8956696bad88F4c6050695CA0E6', nonce='0x30000000000000000', initCode='0x', callDat...tionGas='0x493e0', maxFeePerGas='0xee6b2800', maxPriorityFeePerGas='0xb2d05e00', paymasterAndData='0x', signature='0x')
+E     Full diff:
+E       [
+E     +  UserOperation(sender='0xCD8ED6623971E8956696bad88F4c6050695CA0E6',
+E     +                nonce='0x0',
+E     +                initCode='0x',
+E     +                callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001',
+E     +                callGasLimit='0x493e0',
+E     +                verificationGasLimit='0xf4240',
+E     +                preVerificationGas='0x493e0',
+E     +                maxFeePerGas='0xee6b2800',
+E     +                maxPriorityFeePerGas='0xb2d05e00',
+E     +                paymasterAndData='0x',
+E     +                signature='0x'),
+E        UserOperation(sender='0xCD8ED6623971E8956696bad88F4c6050695CA0E6',
+E                      nonce='0x10000000000000000',
+E                      initCode='0x',
+E                      callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001',
+E                      callGasLimit='0x493e0',
+E                      verificationGasLimit='0xf4240',
+E                      preVerificationGas='0x493e0',
+E                      maxFeePerGas='0xee6b2800',
+E                      maxPriorityFeePerGas='0xb2d05e00',
+E                      paymasterAndData='0x',
+E                      signature='0x'),
+E        UserOperation(sender='0xCD8ED6623971E8956696bad88F4c6050695CA0E6',
+E                      nonce='0x20000000000000000',
+E                      initCode='0x',
+E                      callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001',
+E                      callGasLimit='0x493e0',
+E                      verificationGasLimit='0xf4240',
+E                      preVerificationGas='0x493e0',
+E                      maxFeePerGas='0xee6b2800',
+E                      maxPriorityFeePerGas='0xb2d05e00',
+E                      paymasterAndData='0x',
+E                      signature='0x'),
+E        UserOperation(sender='0xCD8ED6623971E8956696bad88F4c6050695CA0E6',
+E                      nonce='0x30000000000000000',
+E                      initCode='0x',
+E                      callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001',
+E                      callGasLimit='0x493e0',
+E                      verificationGasLimit='0xf4240',
+E                      preVerificationGas='0x493e0',
+E                      maxFeePerGas='0xee6b2800',
+E                      maxPriorityFeePerGas='0xb2d05e00',
+E                      paymasterAndData='0x',
+E                      signature='0x'),
+E       ]</failure><system-out>--------------------------------- Captured Log ---------------------------------
+
+--------------------------------- Captured Out ---------------------------------
+
+</system-out><system-err>--------------------------------- Captured Err ---------------------------------
+
+</system-err></testcase><testcase classname="tests.single.bundle.test_bundle" name="test_max_allowed_ops_staked_sender" time="5.058"><failure message="AssertionError: assert [UserOperatio...gnature='0x')] == [UserOperatio...gnature='0x')]&#10;  At index 0 diff: UserOperation(sender='0x837767b57CEE08cf45D13888ca522d965d5f3aE5', nonce='0x10000000000000000', initCode='0x', callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001', callGasLimit='0x493e0', verificationGasLimit='0xf4240', preVerificationGas='0x493e0', maxFeePerGas='0xee6b2800', maxPriorityFeePerGas='0xb2d05e00', paymasterAndData='0x', signature='0x') != UserOperation(sender='0x837767b57CEE08cf45D13888ca522d965d5f3aE5', nonce='0x20000000000000000', initCode='0x', callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001', callGasLimit='0x493e0', verificationGasLimit='0xf4240', preVerificationGas='0x493e0', maxFeePerGas='0xee6b2800', maxPriorityFeePerGas='0xb2d05e00', paymasterAndData='0x', signature='0x')&#10;  Left contains one more item: UserOperation(sender='0x837767b57CEE08cf45D13888ca522d965d5f3aE5', nonce='0x50000000000000000', initCode='0x', callDat...tionGas='0x493e0', maxFeePerGas='0xee6b2800', maxPriorityFeePerGas='0xb2d05e00', paymasterAndData='0x', signature='0x')&#10;  Full diff:&#10;    [&#10;  +  UserOperation(sender='0x837767b57CEE08cf45D13888ca522d965d5f3aE5',&#10;  +                nonce='0x10000000000000000',&#10;  +                initCode='0x',&#10;  +                callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001',&#10;  +                callGasLimit='0x493e0',&#10;  +                verificationGasLimit='0xf4240',&#10;  +                preVerificationGas='0x493e0',&#10;  +                maxFeePerGas='0xee6b2800',&#10;  +                maxPriorityFeePerGas='0xb2d05e00',&#10;  +                paymasterAndData='0x',&#10;  +                signature='0x'),&#10;     UserOperation(sender='0x837767b57CEE08cf45D13888ca522d965d5f3aE5',&#10;                   nonce='0x20000000000000000',&#10;                   initCode='0x',&#10;                   callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001',&#10;                   callGasLimit='0x493e0',&#10;                   verificationGasLimit='0xf4240',&#10;                   preVerificationGas='0x493e0',&#10;                   maxFeePerGas='0xee6b2800',&#10;                   maxPriorityFeePerGas='0xb2d05e00',&#10;                   paymasterAndData='0x',&#10;                   signature='0x'),&#10;     UserOperation(sender='0x837767b57CEE08cf45D13888ca522d965d5f3aE5',&#10;                   nonce='0x30000000000000000',&#10;                   initCode='0x',&#10;                   callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001',&#10;                   callGasLimit='0x493e0',&#10;                   verificationGasLimit='0xf4240',&#10;                   preVerificationGas='0x493e0',&#10;                   maxFeePerGas='0xee6b2800',&#10;                   maxPriorityFeePerGas='0xb2d05e00',&#10;                   paymasterAndData='0x',&#10;                   signature='0x'),&#10;     UserOperation(sender='0x837767b57CEE08cf45D13888ca522d965d5f3aE5',&#10;                   nonce='0x40000000000000000',&#10;                   initCode='0x',&#10;                   callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001',&#10;                   callGasLimit='0x493e0',&#10;                   verificationGasLimit='0xf4240',&#10;                   preVerificationGas='0x493e0',&#10;                   maxFeePerGas='0xee6b2800',&#10;                   maxPriorityFeePerGas='0xb2d05e00',&#10;                   paymasterAndData='0x',&#10;                   signature='0x'),&#10;     UserOperation(sender='0x837767b57CEE08cf45D13888ca522d965d5f3aE5',&#10;                   nonce='0x50000000000000000',&#10;                   initCode='0x',&#10;                   callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001',&#10;                   callGasLimit='0x493e0',&#10;                   verificationGasLimit='0xf4240',&#10;                   preVerificationGas='0x493e0',&#10;                   maxFeePerGas='0xee6b2800',&#10;                   maxPriorityFeePerGas='0xb2d05e00',&#10;                   paymasterAndData='0x',&#10;                   signature='0x'),&#10;    ]">tests/single/bundle/test_bundle.py:279: in test_max_allowed_ops_staked_sender
+    assert mempool == wallet_ops[1:]
+E   AssertionError: assert [UserOperatio...gnature='0x')] == [UserOperatio...gnature='0x')]
+E     At index 0 diff: UserOperation(sender='0x837767b57CEE08cf45D13888ca522d965d5f3aE5', nonce='0x10000000000000000', initCode='0x', callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001', callGasLimit='0x493e0', verificationGasLimit='0xf4240', preVerificationGas='0x493e0', maxFeePerGas='0xee6b2800', maxPriorityFeePerGas='0xb2d05e00', paymasterAndData='0x', signature='0x') != UserOperation(sender='0x837767b57CEE08cf45D13888ca522d965d5f3aE5', nonce='0x20000000000000000', initCode='0x', callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001', callGasLimit='0x493e0', verificationGasLimit='0xf4240', preVerificationGas='0x493e0', maxFeePerGas='0xee6b2800', maxPriorityFeePerGas='0xb2d05e00', paymasterAndData='0x', signature='0x')
+E     Left contains one more item: UserOperation(sender='0x837767b57CEE08cf45D13888ca522d965d5f3aE5', nonce='0x50000000000000000', initCode='0x', callDat...tionGas='0x493e0', maxFeePerGas='0xee6b2800', maxPriorityFeePerGas='0xb2d05e00', paymasterAndData='0x', signature='0x')
+E     Full diff:
+E       [
+E     +  UserOperation(sender='0x837767b57CEE08cf45D13888ca522d965d5f3aE5',
+E     +                nonce='0x10000000000000000',
+E     +                initCode='0x',
+E     +                callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001',
+E     +                callGasLimit='0x493e0',
+E     +                verificationGasLimit='0xf4240',
+E     +                preVerificationGas='0x493e0',
+E     +                maxFeePerGas='0xee6b2800',
+E     +                maxPriorityFeePerGas='0xb2d05e00',
+E     +                paymasterAndData='0x',
+E     +                signature='0x'),
+E        UserOperation(sender='0x837767b57CEE08cf45D13888ca522d965d5f3aE5',
+E                      nonce='0x20000000000000000',
+E                      initCode='0x',
+E                      callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001',
+E                      callGasLimit='0x493e0',
+E                      verificationGasLimit='0xf4240',
+E                      preVerificationGas='0x493e0',
+E                      maxFeePerGas='0xee6b2800',
+E                      maxPriorityFeePerGas='0xb2d05e00',
+E                      paymasterAndData='0x',
+E                      signature='0x'),
+E        UserOperation(sender='0x837767b57CEE08cf45D13888ca522d965d5f3aE5',
+E                      nonce='0x30000000000000000',
+E                      initCode='0x',
+E                      callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001',
+E                      callGasLimit='0x493e0',
+E                      verificationGasLimit='0xf4240',
+E                      preVerificationGas='0x493e0',
+E                      maxFeePerGas='0xee6b2800',
+E                      maxPriorityFeePerGas='0xb2d05e00',
+E                      paymasterAndData='0x',
+E                      signature='0x'),
+E        UserOperation(sender='0x837767b57CEE08cf45D13888ca522d965d5f3aE5',
+E                      nonce='0x40000000000000000',
+E                      initCode='0x',
+E                      callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001',
+E                      callGasLimit='0x493e0',
+E                      verificationGasLimit='0xf4240',
+E                      preVerificationGas='0x493e0',
+E                      maxFeePerGas='0xee6b2800',
+E                      maxPriorityFeePerGas='0xb2d05e00',
+E                      paymasterAndData='0x',
+E                      signature='0x'),
+E        UserOperation(sender='0x837767b57CEE08cf45D13888ca522d965d5f3aE5',
+E                      nonce='0x50000000000000000',
+E                      initCode='0x',
+E                      callData='0xa9e966b70000000000000000000000000000000000000000000000000000000000000001',
+E                      callGasLimit='0x493e0',
+E                      verificationGasLimit='0xf4240',
+E                      preVerificationGas='0x493e0',
+E                      maxFeePerGas='0xee6b2800',
+E                      maxPriorityFeePerGas='0xb2d05e00',
+E                      paymasterAndData='0x',
+E                      signature='0x'),
+E       ]</failure><system-out>--------------------------------- Captured Log ---------------------------------
+
+--------------------------------- Captured Out ---------------------------------
+
+</system-out><system-err>--------------------------------- Captured Err ---------------------------------
+
+</system-err></testcase><testcase classname="tests.single.bundle.test_bundle" name="test_ban_user_op_access_other_ops_sender_in_bundle" time="4.518"><failure message="AssertionError: assert [UserOperatio...gnature='0x')] == [UserOperatio...gnature='0x')]&#10;  At index 0 diff: UserOperation(sender='0x0018A181BdC5c29f744ff9Fe625e30CE74857b38', nonce='0x0', initCode='0x', callData='0x110205a77540B4A2b24334A983883543A52D5280', callGasLimit='0x493e0', verificationGasLimit='0xf4240', preVerificationGas='0x493e0', maxFeePerGas='0xee6b2800', maxPriorityFeePerGas='0xb2d05e00', paymasterAndData='0x', signature='0x') != UserOperation(sender='0x110205a77540B4A2b24334A983883543A52D5280', nonce='0x0', initCode='0x', callData='0x', callGasLimit='0x493e0', verificationGasLimit='0xf4240', preVerificationGas='0x493e0', maxFeePerGas='0xee6b2800', maxPriorityFeePerGas='0xb2d05e00', paymasterAndData='0x', signature='0x')&#10;  Full diff:&#10;    [&#10;  -  UserOperation(sender='0x110205a77540B4A2b24334A983883543A52D5280',&#10;  +  UserOperation(sender='0x0018A181BdC5c29f744ff9Fe625e30CE74857b38',&#10;                   nonce='0x0',&#10;                   initCode='0x',&#10;  -                callData='0x',&#10;  +                callData='0x110205a77540B4A2b24334A983883543A52D5280',&#10;                   callGasLimit='0x493e0',&#10;                   verificationGasLimit='0xf4240',&#10;                   preVerificationGas='0x493e0',&#10;                   maxFeePerGas='0xee6b2800',&#10;                   maxPriorityFeePerGas='0xb2d05e00',&#10;                   paymasterAndData='0x',&#10;                   signature='0x'),&#10;    ]">tests/single/bundle/test_bundle.py:319: in test_ban_user_op_access_other_ops_sender_in_bundle
+    assert dump_mempool() == [user_op2]
+E   AssertionError: assert [UserOperatio...gnature='0x')] == [UserOperatio...gnature='0x')]
+E     At index 0 diff: UserOperation(sender='0x0018A181BdC5c29f744ff9Fe625e30CE74857b38', nonce='0x0', initCode='0x', callData='0x110205a77540B4A2b24334A983883543A52D5280', callGasLimit='0x493e0', verificationGasLimit='0xf4240', preVerificationGas='0x493e0', maxFeePerGas='0xee6b2800', maxPriorityFeePerGas='0xb2d05e00', paymasterAndData='0x', signature='0x') != UserOperation(sender='0x110205a77540B4A2b24334A983883543A52D5280', nonce='0x0', initCode='0x', callData='0x', callGasLimit='0x493e0', verificationGasLimit='0xf4240', preVerificationGas='0x493e0', maxFeePerGas='0xee6b2800', maxPriorityFeePerGas='0xb2d05e00', paymasterAndData='0x', signature='0x')
+E     Full diff:
+E       [
+E     -  UserOperation(sender='0x110205a77540B4A2b24334A983883543A52D5280',
+E     +  UserOperation(sender='0x0018A181BdC5c29f744ff9Fe625e30CE74857b38',
+E                      nonce='0x0',
+E                      initCode='0x',
+E     -                callData='0x',
+E     +                callData='0x110205a77540B4A2b24334A983883543A52D5280',
+E                      callGasLimit='0x493e0',
+E                      verificationGasLimit='0xf4240',
+E                      preVerificationGas='0x493e0',
+E                      maxFeePerGas='0xee6b2800',
+E                      maxPriorityFeePerGas='0xb2d05e00',
+E                      paymasterAndData='0x',
+E                      signature='0x'),
+E       ]</failure><system-out>--------------------------------- Captured Log ---------------------------------
+
+--------------------------------- Captured Out ---------------------------------
+
+</system-out><system-err>--------------------------------- Captured Err ---------------------------------
+
+</system-err></testcase><testcase classname="tests.single.bundle.test_bundle" name="test_ban_user_sender_double_role_in_bundle" time="6.064" /><testcase classname="tests.single.bundle.test_bundle" name="test_stake_check_in_bundler" time="5.455" /><testcase classname="tests.single.bundle.test_codehash" name="test_codehash_changed" time="6.333"><failure message="AssertionError: assert [UserOperatio...gnature='0x')] == []&#10;  Left contains one more item: UserOperation(sender='0x5bFad5914A34602d2E8CC39e76A2034EFDa904C5', nonce='0x0', initCode='0x', callData='0x', callGasL...tionGas='0x493e0', maxFeePerGas='0xee6b2800', maxPriorityFeePerGas='0xb2d05e00', paymasterAndData='0x', signature='0x')&#10;  Full diff:&#10;    [&#10;  -  ,&#10;  +  UserOperation(sender='0x5bFad5914A34602d2E8CC39e76A2034EFDa904C5',&#10;  +                nonce='0x0',&#10;  +                initCode='0x',&#10;  +                callData='0x',&#10;  +                callGasLimit='0x493e0',&#10;  +                verificationGasLimit='0xf4240',&#10;  +                preVerificationGas='0x493e0',&#10;  +                maxFeePerGas='0xee6b2800',&#10;  +                maxPriorityFeePerGas='0xb2d05e00',&#10;  +                paymasterAndData='0x',&#10;  +                signature='0x'),&#10;    ]">tests/single/bundle/test_codehash.py:79: in test_codehash_changed
+    assert dump_mempool() == []
+E   AssertionError: assert [UserOperatio...gnature='0x')] == []
+E     Left contains one more item: UserOperation(sender='0x5bFad5914A34602d2E8CC39e76A2034EFDa904C5', nonce='0x0', initCode='0x', callData='0x', callGasL...tionGas='0x493e0', maxFeePerGas='0xee6b2800', maxPriorityFeePerGas='0xb2d05e00', paymasterAndData='0x', signature='0x')
+E     Full diff:
+E       [
+E     -  ,
+E     +  UserOperation(sender='0x5bFad5914A34602d2E8CC39e76A2034EFDa904C5',
+E     +                nonce='0x0',
+E     +                initCode='0x',
+E     +                callData='0x',
+E     +                callGasLimit='0x493e0',
+E     +                verificationGasLimit='0xf4240',
+E     +                preVerificationGas='0x493e0',
+E     +                maxFeePerGas='0xee6b2800',
+E     +                maxPriorityFeePerGas='0xb2d05e00',
+E     +                paymasterAndData='0x',
+E     +                signature='0x'),
+E       ]</failure><system-out>--------------------------------- Captured Log ---------------------------------
+
+--------------------------------- Captured Out ---------------------------------
+
+</system-out><system-err>--------------------------------- Captured Err ---------------------------------
+
+</system-err></testcase><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[STO-000]unstaked][paymaster][no_storage][ok]" time="2.994" /><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[STO-031]unstaked][paymaster][storage][drop]" time="2.964" /><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[STO-032]unstaked][paymaster][reference_storage][drop]" time="3.087" /><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[STO-032]unstaked][paymaster][reference_storage_struct][drop]" time="2.990" /><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[STO-010]unstaked][paymaster][account_storage][ok]" time="2.994" /><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[STO-021]unstaked][paymaster][account_reference_storage][ok]" time="3.103" /><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[STO-021]unstaked][paymaster][account_reference_storage_struct][ok]" time="3.007" /><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[STO-022]unstaked][paymaster][account_reference_storage_init_code][drop0]" time="6.199" /><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[EREP-050]unstaked][paymaster][context][drop]" time="3.728" /><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[STO-032]unstaked][paymaster][external_storage_read][drop]" time="3.097" /><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[OP-020]unstaked][paymaster][out_of_gas][drop]" time="4.114" /><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[OP-020]unstaked][paymaster][sstore_out_of_gas][drop]" time="3.927" /><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[STO-000]staked][paymaster][no_storage][ok]" time="5.055" /><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[STO-031]staked][paymaster][storage][ok]" time="4.965" /><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[STO-032]staked][paymaster][reference_storage][ok]" time="5.078" /><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[STO-032]staked][paymaster][reference_storage_struct][ok]" time="5.074" /><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[STO-033]staked][paymaster][reference_storage_struct][ok]" time="4.977" /><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[STO-010]staked][paymaster][account_storage][ok]" time="5.128" /><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[STO-021]staked][paymaster][account_reference_storage][ok]" time="6.936" /><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[STO-021]staked][paymaster][account_reference_storage_struct][ok]" time="8.059" /><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[STO-022]staked][paymaster][account_reference_storage_init_code][ok]" time="8.185" /><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[EREP-050]staked][paymaster][context][ok]" time="3.767" /><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[STO-033]staked][paymaster][external_storage_write][drop]" time="4.151" /><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[STO-033]staked][paymaster][external_storage_read][ok]" time="4.046"><failure message="Exception: expected result object, got:&#10;Error(code=-32502, message='paymaster has forbidden read from 0xe673156430f4205691eb897064fa52dd10a4a2fe slot 0xaed3469875ad6750e818d667b5bd08036a9d5a353af5c0e81a03431a837a7b39', data={'paymaster': '0x07f93cf1ec1498b21bc8555e40395ebc9c5f4097'}, id=239)">tests/utils.py:109: in assert_ok
+    assert response.result
+E   AttributeError: 'Error' object has no attribute 'result'
+
+The above exception was the direct cause of the following exception:
+tests/single/bundle/test_storage_rules.py:769: in test_rule
+    case.assert_func(response)
+tests/utils.py:111: in assert_ok
+    raise Exception(f"expected result object, got:\n{response}") from exc
+E   Exception: expected result object, got:
+E   Error(code=-32502, message='paymaster has forbidden read from 0xe673156430f4205691eb897064fa52dd10a4a2fe slot 0xaed3469875ad6750e818d667b5bd08036a9d5a353af5c0e81a03431a837a7b39', data={'paymaster': '0x07f93cf1ec1498b21bc8555e40395ebc9c5f4097'}, id=239)</failure><system-out>--------------------------------- Captured Log ---------------------------------
+
+--------------------------------- Captured Out ---------------------------------
+
+</system-out><system-err>--------------------------------- Captured Err ---------------------------------
+
+</system-err></testcase><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[OP-020]staked][paymaster][out_of_gas][drop]" time="4.036" /><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[OP-020]staked][paymaster][sstore_out_of_gas][drop]" time="3.956" /><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[STO-000]unstaked][factory][no_storage][ok]" time="4.134" /><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[STO-000]unstaked][factory][storage][drop]" time="4.046" /><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[STO-000]unstaked][factory][reference_storage][drop]" time="4.042" /><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[STO-032]unstaked][factory][reference_storage_struct][drop]" time="3.948" /><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[STO-010]unstaked][factory][account_storage][ok]" time="4.054" /><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[STO-021]unstaked][factory][account_reference_storage][drop]" time="4.047" /><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[STO-021]unstaked][factory][account_reference_storage_struct][drop]" time="4.055" /><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[STO-000]unstaked][factory][external_storage_read][drop]" time="3.941" /><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[OP-042]unstaked][factory][EXTCODEx_CALLx_undeployed_sender][ok]" time="4.003" /><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[OP-041]unstaked][factory][EXTCODESIZE_undeployed_contract][drop]" time="4.006" /><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[OP-041]unstaked][factory][EXTCODEHASH_undeployed_contract][drop]" time="4.110" /><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[OP-041]unstaked][factory][EXTCODECOPY_undeployed_contract][drop]" time="4.003" /><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[OP-041]unstaked][factory][CALL_undeployed_contract][drop]" time="3.997" /><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[OP-041]unstaked][factory][CALLCODE_undeployed_contract][drop]" time="4.000" /><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[OP-041]unstaked][factory][DELEGATECALL_undeployed_contract][drop]" time="3.994" /><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[OP-041]unstaked][factory][STATICCALL_undeployed_contract][drop]" time="4.117" /><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[OP-020]unstaked][factory][out_of_gas][drop]" time="4.148" /><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[OP-020]unstaked][factory][sstore_out_of_gas][drop]" time="4.874" /><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[STO-000]staked][factory][no_storage][ok]" time="6.108" /><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[STO-031]staked][factory][storage][ok]" time="6.024" /><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[STO-032]staked][factory][reference_storage][ok]" time="6.034" /><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[STO-032]staked][factory][reference_storage_struct][ok]" time="6.045" /><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[STO-010]staked][factory][account_storage][ok]" time="6.027" /><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[STO-021]staked][factory][account_reference_storage][ok]" time="6.037" /><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[STO-021]staked][factory][account_reference_storage_struct][ok]" time="6.045" /><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[STO-033]staked][factory][external_storage_write][drop]" time="7.055" /><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[STO-033]staked][factory][external_storage_read][ok]" time="7.975"><failure message="Exception: expected result object, got:&#10;Error(code=-32502, message='factory has forbidden read from 0x521cd1a9513cc6188a58849f2101731f2382c474 slot 0xaed3469875ad6750e818d667b5bd08036a9d5a353af5c0e81a03431a837a7b39', data={'factory': '0x695119667a0bf93ad0c62c1ef8dc05e52152fa8f'}, id=297)">tests/utils.py:109: in assert_ok
+    assert response.result
+E   AttributeError: 'Error' object has no attribute 'result'
+
+The above exception was the direct cause of the following exception:
+tests/single/bundle/test_storage_rules.py:769: in test_rule
+    case.assert_func(response)
+tests/utils.py:111: in assert_ok
+    raise Exception(f"expected result object, got:\n{response}") from exc
+E   Exception: expected result object, got:
+E   Error(code=-32502, message='factory has forbidden read from 0x521cd1a9513cc6188a58849f2101731f2382c474 slot 0xaed3469875ad6750e818d667b5bd08036a9d5a353af5c0e81a03431a837a7b39', data={'factory': '0x695119667a0bf93ad0c62c1ef8dc05e52152fa8f'}, id=297)</failure><system-out>--------------------------------- Captured Log ---------------------------------
+
+--------------------------------- Captured Out ---------------------------------
+
+</system-out><system-err>--------------------------------- Captured Err ---------------------------------
+
+</system-err></testcase><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[OP-020]staked][factory][out_of_gas][drop]" time="8.069" /><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[OP-020]staked][factory][sstore_out_of_gas][drop]" time="5.001" /><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[STO-000]unstaked][account][no_storage][ok]" time="2.880" /><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[STO-010]unstaked][account][account_storage][ok]" time="2.950" /><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[STO-021]unstaked][account][account_reference_storage][ok]" time="3.053" /><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[STO-022]unstaked][account][account_reference_storage_init_code][drop]" time="6.090" /><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[STO-022]unstaked][account][account_reference_storage_init_code][ok]" time="7.050" /><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[STO-022]unstaked][paymaster][account_reference_storage_init_code][drop1]" time="7.143" /><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[STO-021]unstaked][account][account_reference_storage_struct][ok]" time="2.866" /><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[STO-000]unstaked][account][external_storage_read][drop]" time="3.051" /><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[OP-020]unstaked][account][out_of_gas][drop]" time="3.037" /><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[OP-020]unstaked][account][sstore_out_of_gas][drop]" time="2.953" /><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[STO-000]staked][account][no_storage][ok]" time="3.979" /><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[STO-010]staked][account][account_storage][ok]" time="4.095" /><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[STO-021]staked][account][account_reference_storage][ok]" time="4.009" /><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[STO-021]staked][account][account_reference_storage_struct][ok]" time="4.014" /><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[OP-020]staked][account][out_of_gas][drop]" time="4.088" /><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[OP-020]staked][account][sstore_out_of_gas][drop]" time="4.003" /><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[STO-033]staked][account][external_storage_write][drop]" time="4.002" /><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[STO-033]staked][account][external_storage_read][ok]" time="3.985"><failure message="Exception: expected result object, got:&#10;Error(code=-32502, message='account has forbidden read from 0xc329d6e7247dc373a4a35a60a30b42d96cf58d11 slot 0xaed3469875ad6750e818d667b5bd08036a9d5a353af5c0e81a03431a837a7b39', data={'account': '0x80F31486F0F70e3De97Fc07b54e1fA6157571930'}, id=337)">tests/utils.py:109: in assert_ok
+    assert response.result
+E   AttributeError: 'Error' object has no attribute 'result'
+
+The above exception was the direct cause of the following exception:
+tests/single/bundle/test_storage_rules.py:769: in test_rule
+    case.assert_func(response)
+tests/utils.py:111: in assert_ok
+    raise Exception(f"expected result object, got:\n{response}") from exc
+E   Exception: expected result object, got:
+E   Error(code=-32502, message='account has forbidden read from 0xc329d6e7247dc373a4a35a60a30b42d96cf58d11 slot 0xaed3469875ad6750e818d667b5bd08036a9d5a353af5c0e81a03431a837a7b39', data={'account': '0x80F31486F0F70e3De97Fc07b54e1fA6157571930'}, id=337)</failure><system-out>--------------------------------- Captured Log ---------------------------------
+
+--------------------------------- Captured Out ---------------------------------
+
+</system-out><system-err>--------------------------------- Captured Err ---------------------------------
+
+</system-err></testcase><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[OP-011]unstaked][account][entryPoint_call_balanceOf][drop]" time="3.061" /><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[OP-061]unstaked][account][eth_value_transfer_forbidden][drop]" time="3.047" /><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[OP-053]unstaked][account][eth_value_transfer_entryPoint][ok]" time="2.983" /><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[OP-052]unstaked][account][eth_value_transfer_entryPoint_depositTo][ok]" time="3.091" /><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[OP-041]unstaked][account][EXTCODESIZE_undeployed_contract][drop]" time="2.908" /><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[OP-041]unstaked][account][EXTCODEHASH_undeployed_contract][drop]" time="3.003" /><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[OP-041]unstaked][account][EXTCODECOPY_undeployed_contract][drop]" time="3.004" /><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[OP-054]unstaked][account][EXTCODESIZE_entrypoint][drop]" time="3.031" /><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[OP-054]unstaked][account][EXTCODEHASH_entrypoint][drop]" time="3.022" /><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[OP-054]unstaked][account][EXTCODECOPY_entrypoint][drop]" time="3.031" /><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[OP-041]unstaked][account][CALL_undeployed_contract][drop]" time="3.006" /><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[OP-041]unstaked][account][CALLCODE_undeployed_contract][drop]" time="3.001" /><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[OP-041]unstaked][account][DELEGATECALL_undeployed_contract][drop]" time="3.005" /><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[OP-041]unstaked][account][STATICCALL_undeployed_contract][drop]" time="3.000" /><testcase classname="tests.single.bundle.test_storage_rules" name="test_rule[[OP-062]unstaked][account][CALL_undeployed_contract_allowed_precompile][ok]" time="3.171" /><testcase classname="tests.single.opbanning.test_op_banning" name="test_account_banned_opcode[GAS]" time="2.844" /><testcase classname="tests.single.opbanning.test_op_banning" name="test_account_banned_opcode[NUMBER]" time="2.018" /><testcase classname="tests.single.opbanning.test_op_banning" name="test_account_banned_opcode[TIMESTAMP]" time="3.047" /><testcase classname="tests.single.opbanning.test_op_banning" name="test_account_banned_opcode[COINBASE]" time="3.052" /><testcase classname="tests.single.opbanning.test_op_banning" name="test_account_banned_opcode[DIFFICULTY]" time="2.912"><failure message="assert 'SERVER_ERROR' == &lt;RPCErrorCode.BANNED_OPCODE: -32502&gt;&#10; +  where 'SERVER_ERROR' = Error(code='SERVER_ERROR', message='processing response error (body=&quot;{\\&quot;jsonrpc\\&quot;:\\&quot;2.0\\&quot;,\\&quot;id\\&quot;:1687,\\&quot;error\\...&quot;2.0\\&quot;}&quot;, requestMethod=&quot;POST&quot;, url=&quot;http://eth-node:8545&quot;, code=SERVER_ERROR, version=web/5.7.1)', data=None, id=372).code">tests/single/opbanning/test_op_banning.py:46: in test_account_banned_opcode
+    assert_rpc_error(
+tests/utils.py:116: in assert_rpc_error
+    assert response.code == code
+E   assert 'SERVER_ERROR' == &lt;RPCErrorCode.BANNED_OPCODE: -32502&gt;
+E    +  where 'SERVER_ERROR' = Error(code='SERVER_ERROR', message='processing response error (body="{\\"jsonrpc\\":\\"2.0\\",\\"id\\":1687,\\"error\\..."2.0\\"}", requestMethod="POST", url="http://eth-node:8545", code=SERVER_ERROR, version=web/5.7.1)', data=None, id=372).code</failure><system-out>--------------------------------- Captured Log ---------------------------------
+
+--------------------------------- Captured Out ---------------------------------
+
+</system-out><system-err>--------------------------------- Captured Err ---------------------------------
+
+</system-err></testcase><testcase classname="tests.single.opbanning.test_op_banning" name="test_account_banned_opcode[BASEFEE]" time="4.088" /><testcase classname="tests.single.opbanning.test_op_banning" name="test_account_banned_opcode[GASLIMIT]" time="4.025" /><testcase classname="tests.single.opbanning.test_op_banning" name="test_account_banned_opcode[GASPRICE]" time="3.990" /><testcase classname="tests.single.opbanning.test_op_banning" name="test_account_banned_opcode[SELFBALANCE]" time="4.097" /><testcase classname="tests.single.opbanning.test_op_banning" name="test_account_banned_opcode[BALANCE]" time="3.992" /><testcase classname="tests.single.opbanning.test_op_banning" name="test_account_banned_opcode[ORIGIN]" time="2.044" /><testcase classname="tests.single.opbanning.test_op_banning" name="test_account_banned_opcode[BLOCKHASH]" time="1.939" /><testcase classname="tests.single.opbanning.test_op_banning" name="test_account_banned_opcode[CREATE]" time="2.057" /><testcase classname="tests.single.opbanning.test_op_banning" name="test_account_banned_opcode[CREATE2]" time="2.055" /><testcase classname="tests.single.opbanning.test_op_banning" name="test_account_banned_opcode[SELFDESTRUCT]" time="1.955" /><testcase classname="tests.single.opbanning.test_op_banning" name="test_account_allowed_opcode_sequence[GAS CALL]" time="2.099" /><testcase classname="tests.single.opbanning.test_op_banning" name="test_account_allowed_opcode_sequence[GAS DELEGATECALL]" time="1.994" /><testcase classname="tests.single.opbanning.test_op_banning" name="test_paymaster_banned_opcode[GAS]" time="3.003" /><testcase classname="tests.single.opbanning.test_op_banning" name="test_paymaster_banned_opcode[NUMBER]" time="3.003" /><testcase classname="tests.single.opbanning.test_op_banning" name="test_paymaster_banned_opcode[TIMESTAMP]" time="3.013" /><testcase classname="tests.single.opbanning.test_op_banning" name="test_paymaster_banned_opcode[COINBASE]" time="3.009" /><testcase classname="tests.single.opbanning.test_op_banning" name="test_paymaster_banned_opcode[DIFFICULTY]" time="2.973"><failure message="assert 'SERVER_ERROR' == &lt;RPCErrorCode.BANNED_OPCODE: -32502&gt;&#10; +  where 'SERVER_ERROR' = Error(code='SERVER_ERROR', message='processing response error (body=&quot;{\\&quot;jsonrpc\\&quot;:\\&quot;2.0\\&quot;,\\&quot;id\\&quot;:1764,\\&quot;error\\...&quot;2.0\\&quot;}&quot;, requestMethod=&quot;POST&quot;, url=&quot;http://eth-node:8545&quot;, code=SERVER_ERROR, version=web/5.7.1)', data=None, id=389).code">tests/single/opbanning/test_op_banning.py:67: in test_paymaster_banned_opcode
+    assert_rpc_error(
+tests/utils.py:116: in assert_rpc_error
+    assert response.code == code
+E   assert 'SERVER_ERROR' == &lt;RPCErrorCode.BANNED_OPCODE: -32502&gt;
+E    +  where 'SERVER_ERROR' = Error(code='SERVER_ERROR', message='processing response error (body="{\\"jsonrpc\\":\\"2.0\\",\\"id\\":1764,\\"error\\..."2.0\\"}", requestMethod="POST", url="http://eth-node:8545", code=SERVER_ERROR, version=web/5.7.1)', data=None, id=389).code</failure><system-out>--------------------------------- Captured Log ---------------------------------
+
+--------------------------------- Captured Out ---------------------------------
+
+</system-out><system-err>--------------------------------- Captured Err ---------------------------------
+
+</system-err></testcase><testcase classname="tests.single.opbanning.test_op_banning" name="test_paymaster_banned_opcode[BASEFEE]" time="3.117" /><testcase classname="tests.single.opbanning.test_op_banning" name="test_paymaster_banned_opcode[GASLIMIT]" time="3.018" /><testcase classname="tests.single.opbanning.test_op_banning" name="test_paymaster_banned_opcode[GASPRICE]" time="3.013" /><testcase classname="tests.single.opbanning.test_op_banning" name="test_paymaster_banned_opcode[SELFBALANCE]" time="3.026" /><testcase classname="tests.single.opbanning.test_op_banning" name="test_paymaster_banned_opcode[BALANCE]" time="3.027" /><testcase classname="tests.single.opbanning.test_op_banning" name="test_paymaster_banned_opcode[ORIGIN]" time="3.029" /><testcase classname="tests.single.opbanning.test_op_banning" name="test_paymaster_banned_opcode[BLOCKHASH]" time="3.028" /><testcase classname="tests.single.opbanning.test_op_banning" name="test_paymaster_banned_opcode[CREATE]" time="3.041" /><testcase classname="tests.single.opbanning.test_op_banning" name="test_paymaster_banned_opcode[CREATE2]" time="2.943" /><testcase classname="tests.single.opbanning.test_op_banning" name="test_paymaster_banned_opcode[SELFDESTRUCT]" time="3.039" /><testcase classname="tests.single.opbanning.test_op_banning" name="test_factory_banned_opcode[GAS]" time="4.078" /><testcase classname="tests.single.opbanning.test_op_banning" name="test_factory_banned_opcode[NUMBER]" time="4.080" /><testcase classname="tests.single.opbanning.test_op_banning" name="test_factory_banned_opcode[TIMESTAMP]" time="3.977" /><testcase classname="tests.single.opbanning.test_op_banning" name="test_factory_banned_opcode[COINBASE]" time="4.079" /><testcase classname="tests.single.opbanning.test_op_banning" name="test_factory_banned_opcode[DIFFICULTY]" time="1.684"><failure message="ValueError: {'code': -32603, 'message': 'method handler crashed'}">tests/single/opbanning/test_op_banning.py:80: in test_factory_banned_opcode
+    ).build_transaction()["data"][2:]
+.venv/lib/python3.10/site-packages/web3/contract.py:1099: in build_transaction
+    return build_transaction_for_function(
+.venv/lib/python3.10/site-packages/web3/contract.py:1672: in build_transaction_for_function
+    prepared_transaction = fill_transaction_defaults(web3, prepared_transaction)
+cytoolz/functoolz.pyx:249: in cytoolz.functoolz.curry.__call__
+    ???
+.venv/lib/python3.10/site-packages/web3/_utils/transactions.py:114: in fill_transaction_defaults
+    default_val = default_getter(web3, transaction)
+.venv/lib/python3.10/site-packages/web3/_utils/transactions.py:60: in &lt;lambda&gt;
+    'gas': lambda web3, tx: web3.eth.estimate_gas(tx),
+.venv/lib/python3.10/site-packages/web3/eth.py:868: in estimate_gas
+    return self._estimate_gas(transaction, block_identifier)
+.venv/lib/python3.10/site-packages/web3/module.py:57: in caller
+    result = w3.manager.request_blocking(method_str,
+.venv/lib/python3.10/site-packages/web3/manager.py:198: in request_blocking
+    return self.formatted_response(response,
+.venv/lib/python3.10/site-packages/web3/manager.py:171: in formatted_response
+    raise ValueError(response["error"])
+E   ValueError: {'code': -32603, 'message': 'method handler crashed'}</failure><system-out>--------------------------------- Captured Log ---------------------------------
+
+--------------------------------- Captured Out ---------------------------------
+
+</system-out><system-err>--------------------------------- Captured Err ---------------------------------
+
+</system-err></testcase><testcase classname="tests.single.opbanning.test_op_banning" name="test_factory_banned_opcode[BASEFEE]" time="4.280" /><testcase classname="tests.single.opbanning.test_op_banning" name="test_factory_banned_opcode[GASLIMIT]" time="3.966" /><testcase classname="tests.single.opbanning.test_op_banning" name="test_factory_banned_opcode[GASPRICE]" time="4.077" /><testcase classname="tests.single.opbanning.test_op_banning" name="test_factory_banned_opcode[SELFBALANCE]" time="3.972" /><testcase classname="tests.single.opbanning.test_op_banning" name="test_factory_banned_opcode[BALANCE]" time="4.075" /><testcase classname="tests.single.opbanning.test_op_banning" name="test_factory_banned_opcode[ORIGIN]" time="5.005" /><testcase classname="tests.single.opbanning.test_op_banning" name="test_factory_banned_opcode[BLOCKHASH]" time="5.115" /><testcase classname="tests.single.opbanning.test_op_banning" name="test_factory_banned_opcode[CREATE]" time="5.028" /><testcase classname="tests.single.opbanning.test_op_banning" name="test_factory_banned_opcode[CREATE2]" time="5.018" /><testcase classname="tests.single.opbanning.test_op_banning" name="test_factory_banned_opcode[SELFDESTRUCT]" time="5.022" /><testcase classname="tests.single.reputation.test_reputation" name="test_staked_entity_reputation_threshold[with_factory]" time="1274.748" /><testcase classname="tests.single.reputation.test_reputation" name="test_staked_entity_reputation_threshold[without_factory]" time="102.370" /><testcase classname="tests.single.rpc.test_eth_chainId" name="test_eth_chainId[]" time="0.010" /><testcase classname="tests.single.rpc.test_eth_estimateUserOperationGas" name="test_eth_estimateUserOperationGas[]" time="0.752" /><testcase classname="tests.single.rpc.test_eth_estimateUserOperationGas" name="test_eth_estimateUserOperationGas_execution_revert" time="1.056" /><testcase classname="tests.single.rpc.test_eth_estimateUserOperationGas" name="test_eth_estimateUserOperationGas_simulation_revert" time="0.949" /><testcase classname="tests.single.rpc.test_eth_getUserOperationByHash" name="test_eth_getUserOperationByHash[]" time="1.557"><failure message="TypeError: 'NoneType' object is not subscriptable">tests/single/rpc/test_eth_getUserOperationByHash.py:14: in test_eth_getUserOperationByHash
+    assert userop_hash(
+E   TypeError: 'NoneType' object is not subscriptable</failure><system-out>--------------------------------- Captured Log ---------------------------------
+
+--------------------------------- Captured Out ---------------------------------
+
+</system-out><system-err>--------------------------------- Captured Err ---------------------------------
+
+</system-err></testcase><testcase classname="tests.single.rpc.test_eth_getUserOperationByHash" name="test_eth_getUserOperationByHash_error" time="0.003" /><testcase classname="tests.single.rpc.test_eth_getUserOperationReceipt" name="test_eth_getUserOperationReceipt[]" time="0.853"><failure message="TypeError: 'NoneType' object is not subscriptable">tests/single/rpc/test_eth_getUserOperationReceipt.py:15: in test_eth_getUserOperationReceipt
+    assert response.result["userOpHash"] == userop_hash(helper_contract, userop)
+E   TypeError: 'NoneType' object is not subscriptable</failure><system-out>--------------------------------- Captured Log ---------------------------------
+
+--------------------------------- Captured Out ---------------------------------
+
+</system-out><system-err>--------------------------------- Captured Err ---------------------------------
+
+</system-err></testcase><testcase classname="tests.single.rpc.test_eth_getUserOperationReceipt" name="test_eth_getUserOperationReceipt_error" time="0.003" /><testcase classname="tests.single.rpc.test_eth_sendUserOperation" name="test_eth_sendUserOperation[]" time="0.946"><failure message="assert 0 == 1111111">tests/single/rpc/test_eth_sendUserOperation.py:20: in test_eth_sendUserOperation
+    assert state_after == 1111111
+E   assert 0 == 1111111</failure><system-out>--------------------------------- Captured Log ---------------------------------
+
+--------------------------------- Captured Out ---------------------------------
+
+</system-out><system-err>--------------------------------- Captured Err ---------------------------------
+
+</system-err></testcase><testcase classname="tests.single.rpc.test_eth_sendUserOperation" name="test_eth_sendUserOperation_revert" time="0.852" /><testcase classname="tests.single.rpc.test_eth_sendUserOperation" name="test_eth_sendUserOperation_invalid_signature" time="1.075" /><testcase classname="tests.single.rpc.test_eth_supportedEntryPoints" name="test_eth_supportedEntryPoints[]" time="0.012" /></testsuite></testsuites>
