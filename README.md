@@ -2,7 +2,7 @@
 
 This repo runs the `bundler-spec-test` against a list of bundlers, and show the results.
 
-The result page is in: https://qitmeer.github.io/bundler-test-results/
+The result page is in: https://qitmeer.github.io/bundler-test-executor/bundlers/
 
 Each bundler to run has a folder and yml file [./bundlers](./bundlers) folder
 
